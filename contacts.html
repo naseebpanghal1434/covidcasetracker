@@ -9,38 +9,41 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="script/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="script/script.js"></script>
 </head>
 
-<body>
-    <div class="container wholecont">
-        <header>
-            <!--Navigation bar-->
-            <div id="nav-placeholder">
+<body>    
+    <article class="container wholecont">
+        <!--Navigation bar-->
+        <nav>
 
-            </div>
+            <div id="nav-placeholder"></div>
 
             <script>
                 $(function () {
                     $("#nav-placeholder").load("nav.html");
                 });
             </script>
-            <!--end of Navigation bar-->
-        </header>
+        </nav>
+        <!--end of Navigation bar-->
 
-        <article>
-            <h1 id="pagetitle"></h1>
-            <br>
-            <p>
-                Helpline Number: +91-11-23978046 <br>
-                Toll Free: 1075 Helpline <br>
-                Email ID: ncov2019@gov.in <br>
+        <!-- Page Content -->
+        <div class="maincontent">
+            <section>
+                <h1 id="pagetitle"></h1>
+                <br>
+                <p>
+                    Helpline Number: +91-11-23978046 <br>
+                    Toll Free: 1075 Helpline <br>
+                    Email ID: ncov2019@gov.in <br>
+                </p>
+            </section>
+        </div>
+        <!-- End of Page Content -->
 
-            </p>
-        </article>
-    </div>
+    </article>
 </body>
 <script>
     document.getElementById("pagetitle").innerHTML = document.title;
