@@ -1,3 +1,4 @@
+/* 1. Navbar Styling CSS */
 .topnav {
   overflow: hidden;
   background-color: #333;
@@ -26,10 +27,42 @@
 .topnav .icon {
   display: none;
 }
+/* End of Navbar Styling CSS */
+
+/* 2.  Header */
+header{
+  padding: 0px;
+  margin: 0px;
+}
+
+/*3. Body Background Color */
 
 body {
   background-color: #e9eae8;
 }
+
+/* 4. Inside Styling of body area */
+#pagetitle {
+  text-align: center;
+  text-decoration: underline;
+  padding: 10px;
+}
+
+.wholecont{
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  padding: 0px;
+  background-color: #fff;
+  color: #000;
+}
+/* To Display padding in whole content of body */
+.maincontent{
+  padding: 20px;
+}
+
+
+/* 5. Media Queries for screen sizes */
 
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
@@ -55,51 +88,4 @@ body {
     display: block;
     text-align: left;
   }
-}
-
-#pagetitle {
-  text-align: center;
-  text-decoration: underline;
-  padding: 10px;
-}
-
-.mycontainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-img {
-  width: 100%;
-  height: auto;
-}
-.box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 35rem;
-  min-width: 18rem;
-  margin: 10px;
-  text-align: center;
-}
-
-.wholecont{
-  border-width: 2px;
-  border-style: solid;
-  border-color: black;
-  padding: 0px;
-  background-color: #fff;
-  color: #000;
-}
-
-header{
-  padding: 0px;
-  margin: 0px;
-}
-
-/* To Display padding in whole content of body */
-.maincontent{
-  padding: 20px;
 }

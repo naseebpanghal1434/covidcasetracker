@@ -1,3 +1,5 @@
+// 1. Script for Navbar to display on all pages
+
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -6,6 +8,8 @@ function myFunction() {
     x.className = "topnav";
   }
 }
+
+//2. Scipt and API fecth function Described
 
 function fetch() {
   $.get(

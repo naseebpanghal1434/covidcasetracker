@@ -16,27 +16,30 @@
 
 <body onload="fetch()">
 
-    
-    
-    <div class="container wholecont">
-        <header>
-            <!--Navigation bar-->
-            <div id="nav-placeholder">
-            </div>
-            <script>
-                $(function () {
-                    $("#nav-placeholder").load("nav.html");
-                });
-            </script>
-            <!--end of Navigation bar-->
-        </header>
-        <article>
+    <section class="container wholecont">
+        <!--Navigation bar-->
+        <section>
+            <nav>
 
-            <!-- First Table to Show Global Data -->
-            <h1 class="text-center mt-5">Covid 19 Live data table</h1>
-            <br><br>
+                <div id="nav-placeholder">
+                </div>
+                <script>
+                    $(function () {
+                        $("#nav-placeholder").load("nav.html");
+                    });
+                </script>
+
+            </nav>
+        </section>
+        <!--end of Navigation bar-->
+        
+        <!-- Fetching Title of Page -->
+        <br><h1 id="pagetitle"></h1><br><br>
+
+        <!-- First Table to Show Global Data -->
+        <section>
+            <h2 class="maincontent">Global Covid-19 Cases Live Data</h2>
             <div class="table-responsive container-fluid">
-
                 <table class="table table-bordered table-striped text-center">
                     <thead>
                         <tr>
@@ -51,27 +54,30 @@
                         <tr id="data"></tr>
                     </tbody>
                 </table>
-            </div>
-            <!-- End of First Table to Show Global Data -->
+                <!-- Buttont to refresh live data for Global table without reloading Whole page. -->
 
-
-            <!-- Buttont to refresh live data for Global table without reloading Whole page. -->
-            <br><br>
-            <div class="container">
-                <div class="text-justify">
-                    <button onclick="refreshdata()" class="btn btn-danger btn-block align-c">Refresh Data</button>
+                <div class="text-center">
+                    <button onclick="refreshdata()" class="btn btn-danger btn-block align-c">Refresh Global Data</button>
                 </div>
+                <!-- End of Buttont to refresh live data for Global table without reloading Whole page. -->
+
             </div>
-            <br><br>
-            <!-- End of Buttont to refresh live data for Global table without reloading Whole page. -->
+        </section>
+
+        <!-- End of First Table to Show Global Data -->
+
+        <!-- Adding Space between both sections -->
+        <br><br><br> 
 
 
-            <!--Second table to show country wise data in single table-->
-            <h1 class="text-center mt-5">Covid data According to Countires</h1>
+
+        <!--Second table to show country wise data in single table-->
+        <section>
+            <h2 class="maincontent">Countires/Regions Based Covid-19 live Data</h2>
             <div class="table-responsive corona_update container-fluid">
                 <table class="table table-bordered table-striped text-center" id="tbval">
                     <tr>
-                        <th>Country</th>
+                        <th>Country/Region</th>
                         <th>TotalConfirmed</th>
                         <th>TotalRecovered</th>
                         <th>TotalDeaths</th>
@@ -81,9 +87,14 @@
                     </tr>
                 </table>
             </div>
-            <!--End of Second table to show country wise data in single table-->
-        </article>
-    </div>
+        </section>
+
+        <!--End of Second table to show country wise data in single table-->
+        <div class="maincontent">
+            <p><i>* To Get Refreshed CountiresWise data, refresh this page. </i></p>
+        </div>
+
+    </section>
 </body>
 
 <script>
@@ -121,6 +132,9 @@
         $("#data").empty()
 
     }
+
+    document.getElementById("pagetitle").innerHTML = document.title;
+
 </script>
 
 </html>
