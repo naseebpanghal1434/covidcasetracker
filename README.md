@@ -1,3 +1,3 @@
 # minroproject
 
-<!-- Hello World -->
+This is my Minor Project. 
